@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>실시간 채팅</title>
+</head>
+<body>
+<h2>실시간 채팅</h2>
+<form action="#" th:action="@{/chat}" method="post">
+    <label for="username">사용자 이름:</label>
+    <input type="text" id="username" name="username" required/>
+    <label for="chatroomid">채팅방 아이디:</label>
+    <input type="text" id="chatroomid" name="chatroomid" required/>
+    <button type="submit">채팅방 입장</button>
+</form>
+</body>
+</html>

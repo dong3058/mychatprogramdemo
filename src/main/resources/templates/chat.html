@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>채팅방</title>
+</head>
+<body>
+<h2>채팅방</h2>
+<div id="messages"></div>
+<form id="messageForm">
+    <input type="text" id="messageInput" placeholder="메시지 입력..." />
+    <input type="text" id="chatroomid" th:value="${messageTest.chatroomid}" />
+    <button type="submit">전송</button>
+</form>
+
+<form id="messageout" th:action="@{/home}" method="get" >
+
+    <button type="submit">채팅방 나가기</button>
+</form>
+<form id="messageout2" th:action="@{/home}" method="get" >
+
+    <button type="submit">홈화면으로 돌아가기</button>
+</form>
+
+<script th:inline="javascript">
+    var username = /*[[${username}]]*/ '';
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.4.0/sockjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+
+
+<script src="/js/chat.js"></script>
+</body>
+</html>
